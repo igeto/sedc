@@ -1,0 +1,40 @@
+html, body {
+	height: 100%;
+}
+.cover {
+	background: url(../img/stars.jpg) no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+#cover-caption {
+	color: #fff;
+	padding-top: 15%;
+}
+.bold {
+	font-weight: 900;
+	padding-top: 30px;
+}
+.card {
+	padding: 10px;
+}
+#cover-fixed {
+	background: url("../img/girlincar.jpg") no-repeat center center;
+	background-attachment: fixed;
+	height: 600px;
+	padding-top: 50px;
+	margin-top: 50px;
+}
+.card-inverse {
+	background-color: rgba(51, 51, 51, .8);
+	border-radius: 0;
+}
+.footer {
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	font-weight: 100;
+	padding-top: 10px;
+	font-size: 14px;
+}

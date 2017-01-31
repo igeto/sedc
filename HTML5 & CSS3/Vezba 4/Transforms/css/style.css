@@ -1,0 +1,39 @@
+.box {
+    background-color: orange;
+    width: 500px;
+    height: 500px;
+    margin: 10% auto;
+    position: relative;
+}
+.box::before {
+    content: "";
+    background-color: green;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: -50%;
+    position: absolute;
+    z-index: -1;
+}
+.box::after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: 50%;
+    position: absolute;
+    z-index: -1;
+}
+img {
+    height: 490px;
+    width: 490px;
+    position: absolute;
+}
+::selection {
+    color: yellow;
+    background-color: rgba(255, 0, 0, .4);
+}
+body {
+    background-image: url(../img/weed.jpg);
+}

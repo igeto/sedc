@@ -1,0 +1,194 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@keyframes load {
+	0% {
+	background-color: rgba(255, 255, 255, 1);
+		width: 0;
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 1);
+		width: 150px;
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+@keyframes load-square {
+	0% {
+	background-color: rgba(255, 255, 255, 1);
+		width: 0;
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 1);
+		width: 100px;
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+@keyframes orbit {
+	0% { transform: rotate(0deg) translateX(20px); }
+    20% {transform: rotate(180deg) translateX(20px);}
+    100% {transform: rotate(180deg) translateX(20px);}
+}
+@keyframes orbit1 {
+	0% { transform: rotate(0deg) translateX(-20px); }
+    20% {transform: rotate(180deg) translateX(-20px);}
+    100% {transform: rotate(180deg) translateX(-20px);}
+}
+@keyframes outline {	
+	0% {
+		left: 140px;
+		top: 40px;
+	}
+	25% {
+		left: 250px;
+		top: 40px;
+	}
+	50% {
+		left: 250px;
+		top: 150px;
+	}
+	75% {
+		left: 140px;
+		top: 150px;
+	}
+	100% {
+		left: 140px;
+		top: 40px;
+	}
+}
+.animations {
+	height: 400px;
+	margin: 0 auto;
+	width: 800px;
+}
+.box {
+	background-color: rgb(255, 0, 0);
+	border: 0;
+	display: inline-block;
+	height: 200px;
+	left: 0;
+	margin: 0;
+	position: relative;
+	top: 0;
+	width: 400px;
+}
+.first-loader {
+	background-color: rgba(255, 255, 255, .8);
+	height: 5px;
+	left: 30%;
+	position: absolute;
+	top: 28%;
+	width: 150px;
+	
+}
+.fill {
+	animation-name: load;
+	animation-duration: 10s;
+  	animation-timing-function: ease-out;
+  	animation-iteration-count: infinite;
+}
+.fill-square {
+	animation-name: load-square;
+	animation-duration: 7s;
+  	animation-timing-function: ease-out;
+  	animation-iteration-count: infinite;
+}
+.loading {
+	background-color: rgba(100, 0, 0, .2);
+	position: absolute;
+	width: 150px;
+	height: 25px;
+	top: 30%;
+	left: 30%;
+	color: rgba(255, 255, 255, .5);
+	font-size: 25px;
+	text-align: center;
+}
+.second-loader {
+	background-color: rgba(255, 255, 255, .8);
+	position: absolute;
+	width: 150px;
+	height: 5px;
+	top: 42%;
+	left: 30%;
+}
+.loader {
+	left: 0;
+	float: left;
+}
+.loader-two {
+	float: left;
+}
+.loading-two {
+	position: absolute;
+	width: 150px;
+	height: 25px;
+	top: 30%;
+	left: 30%;
+	font-size: 25px;
+	background-color: rgba(255, 255, 255, .1);
+	color: rgba(255, 255, 255, .5);
+	text-align: center;
+}
+.progress {
+	position: absolute;
+	width: 150px;
+	height: 25px;
+	top: 30%;
+	left: 30%;
+	background-color: rgba(255, 255, 255, 1);
+}
+.box-two {
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 400px;
+	height: 200px;
+	position: relative;
+	background-color: rgb(255, 0, 0);
+	display: inline-block;
+	border: 0;
+	float: left;
+}
+.circle {
+	top: 40%;
+	left: 40%;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 50%;
+}
+.left-circle {
+	background-color: rgba(255, 255, 255, .5);
+	transform: translateX(-20px);
+	animation: orbit 1s 1ms linear infinite;
+}
+.right-circle {
+	background-color: rgba(255, 255, 255, .5);
+	animation: orbit1 1s 1ms  linear infinite;
+	transform: translateX(20px);
+}
+.square {
+	top: 50px;
+	left: 150px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, .5);
+}
+.outline-circle {
+	position: absolute;
+	top: 40px;
+	left: 140px;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	animation: outline 4s linear infinite;
+}

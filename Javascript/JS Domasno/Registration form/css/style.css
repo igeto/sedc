@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+header {
+    height: 70px;
+    background-color: rgb(35, 178, 116);
+}
+section {
+    background-color: rgb(234, 239, 247);
+    position: relative;
+    height: 500px;
+}
+.label {
+    text-align: right;
+}
+label {
+    cursor: pointer;
+}
+.gender {
+    vertical-align: top;
+}
+.textField {
+    width: 167px;
+}
+.dropdown {
+    width: 171px;
+}
+table {
+    position: absolute;
+    top: 18%;
+    left: 36%;
+}
+.submit {
+   margin-left: 37%;;
+}
+
+footer {
+    height: 70px;
+    background-color: rgb(35, 178, 116);    
+}

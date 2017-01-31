@@ -1,0 +1,23 @@
+
+.box {
+	height: 100px;
+	background-color: red;
+	color: #fff;
+}
+.full {
+	height: 100px;
+	background-color: blue;
+	color: #fff;
+}
+.full, .box {
+	text-align: center;
+}
+.yellow {
+	background-color: yellow;
+}
+.blue {
+	background-color: blue;
+}
+.pink {
+	background-color: pink;
+}

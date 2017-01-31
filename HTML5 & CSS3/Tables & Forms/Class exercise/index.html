@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Class Exercise</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<form action="login/login.php" method="post">
+			<table>
+				<caption>STUDENT EXERCISE</caption>
+				<thead class="table-header">
+					<tr bgcolor="#d9d9d9">
+						<td colspan="3"><b>Testform</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><label for="name">Name</label></td>
+						<td><input type="text" name="name" id="name" placeholder="Enter your name here" /></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="password">Password</label></td>
+						<td><input type="passw" name="password" id="password" placeholder="Enter password" /></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="2"><label>Gender</label></td>
+						<td><input type="radio" name="gender" value="Male" id="male" /><label for="male">Male</label></td>
+						<td></td>
+					</tr>
+					<tr>						
+						<td><input type="radio" name="gender" value="Female" id="female" /><label for="female">Female</label></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Continent: </td>
+						<td>
+							<select name="continent">
+								<option value="default" selected disabled>Select your continent</option>
+								<option value="Europe">Europe</option>
+								<option value="Asia">Asia</option>
+								<option value="North America">North America</option>
+								<option value="South America">South America</option>
+								<option value="Afrika">Afrika</option>
+							</select>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td rowspan="3">Meals</td>
+						<td><input type="checkbox" name="meals" value="breakfast" id="breakfast" /><label for="breakfast">Breakfast</label></td>
+						<td></td>
+					</tr>
+					<tr>						
+						<td><input type="checkbox" name="meals" value="lunch" id="lunch" /><label for="lunch">Lunch</label></td>
+						<td></td>
+					</tr>
+					<tr>						
+						<td><input type="checkbox" name="meals" value="dinner" id="dinner"><label>Dinner</label></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Remark:</td>
+						<td><textarea name="remark" id="remark" cols="70" rows="4"></textarea></td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>				
+					<tr bgcolor="#d9d9d9">
+						<td colspan="3" style="text-align:right; padding-right: 0" >
+							<button type="submit">
+								Submit
+							</button>
+							<button type="reset">
+								Cancel
+							</button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+	</body>
+</html>

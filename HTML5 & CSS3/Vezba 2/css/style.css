@@ -1,0 +1,54 @@
+* {
+	font-family: Arial, Verdana, sans-serif, cursive;
+}
+h1 {
+	font-family: "Courier New", monospace;
+}
+i {
+	color: yellow;
+}
+b {
+	color: violet;
+}
+p b {
+	color: cyan;
+}
+.test.test {
+	font-size: 20px;
+}
+.test {
+	font-size: 25px;
+}
+.page {
+	background-color: rgba(56, 124, 86, .25);
+}
+p {
+	line-height: 30px;
+	text-align: left;
+}
+a:link {
+	color: black;
+	text-decoration: underline;
+	letter-spacing: 0em;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+a:visited {
+	color: green;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: pink;
+}
+#pic > p {
+	display: inline-block;
+	/*vertical-align: middle;*/
+	margin: 0;
+	text-shadow: 1px 1px 10px;
+}
+#pic > p:first-line {
+	font-size: 20px;
+}

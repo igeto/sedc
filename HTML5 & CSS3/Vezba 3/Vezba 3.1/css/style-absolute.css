@@ -1,0 +1,36 @@
+* {
+	background-color: #afafaf;
+}
+.box-set, .box {
+	border-radius: 10px;
+}
+.box-set {
+	background-color: #eaeaed;
+	position: relative;
+	height: 300px;
+}
+.box {
+	color: #fff;
+	border-radius: 100px;
+	background-color: green;
+	font-size: 24px;
+	text-align: center;
+	line-height: 80px;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+}
+.box-1 {
+	top: -45px;
+	left: 166px;
+}
+.box-2 {
+	right: 0;
+}
+.box-3 {
+	bottom: -10px;
+	right: 30px;
+}
+.box-4 {
+	bottom: 0;
+}

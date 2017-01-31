@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+}
+body {
+	background-color: rgb(230, 230, 230);
+}
+header {
+	background-color: rgb(226,0,116);
+	height: 25px;
+	width: 100%;
+}
+.logo {
+	display: inline-block;
+	left: 20%;
+	position: relative;
+}
+nav {
+	/*right: 22.1%;*/
+	display: inline-block;
+	float: right;
+	position: relative;
+	right: 19.09%;
+	top: 0;
+}
+ul {
+	height: 25px;
+	padding-left: 0;
+	width: 100%;
+}
+.menu li {
+	display: inline;
+}
+.menu-button {
+	background-color: rgb(248, 248, 248);
+	border-style: none;
+	height: 100%;
+	outline: none;
+	text-align: center;
+	width: 13%;
+}
+.main-div {
+	background-color: yellow;
+	height: 1185px;
+	left: 20%;
+	/*padding-top: 5px;*/
+	position: relative;
+	width: 60%;
+}
+.row-one {
+	background-color: white;
+	height: 330px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 1%;
+	width: 98%;
+}
+.row-two_first-section {
+	background-color: green;
+	display: inline-block;
+	float: left;
+	height: 400px;
+	width: 12.5%;
+}
+.row-two_second-section {
+	background-color: red;
+	display: inline-block;
+	float: left;
+	height: 400px;
+	width: 25%;
+
+}
+.row-two_third-section {
+	background-color: blue;
+	display: inline-block;
+	float: left;
+	height: 400px;
+	width: 25%;
+}
+.row-two_fourth-section {
+	background-color: orange;
+	display: inline-block;
+	float: left;
+	height: 400px;
+	width: 25%;
+}
+
+.row-two_fifth-section {
+	background-color: purple;
+	display: inline-block;
+	float: left;
+	height: 400px;
+	width: 12.5%;
+}
+.row-three_first-section {
+	background-color: red;
+	display: inline-block;
+	float: left;
+	height: 250px;
+	width: 33%;
+}
+.row-three_second-section {
+	background-color: orange;
+	display: inline-block;
+	float: left;
+	height: 250px;
+	width: 34%;
+}
+.row-three_third-section {
+	background-color: green;
+	display: inline-block;
+	float: left;
+	height: 250px;
+	width: 33%;
+}
+.row-four_first-section {
+	background-color: green;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 25%;
+}
+.row-four_second-section {
+	background-color: blue;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 25%;
+}
+.row-four_third-section {
+	background-color: red;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 25%;
+}
+.row-four_fourth-section {
+	background-color: orange;
+	display: inline-block;
+	float: left;
+	height: 200px;
+	width: 25%;
+}
+footer {
+	background-color: rgb(226,0,116);
+	height: 25px;
+	width: 100%;
+
+}
+@media screen and (max-width: 800px) {
+	nav {
+		display: none;
+	}
+	.main-div {
+		padding-top: 5px;
+		height: 3285px;
+	}
+	.row-one {
+		margin-bottom: 5px;
+		margin-left: 0;
+		width: 100%;
+	}
+	.row-two {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	.row-three {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+}

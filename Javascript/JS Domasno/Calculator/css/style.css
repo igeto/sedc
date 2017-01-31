@@ -1,0 +1,72 @@
+table {
+	background-color: black;
+	border-radius: 16px;
+	table-layout: fixed;
+}
+th, td {
+	border: none;
+}
+th {
+	border-radius: 5px;
+}
+#table__thead__screen {
+	text-align: right;
+	font-family: 'digital-7';
+	font-size: 32px;
+	height: 40px;
+	font-weight: normal;
+	background-image: url(../img/123.jpg);
+}
+@font-face {
+	font-family: 'digital-7';
+	src: url('../fonts/digital-7.ttf');
+}
+.numberButton {
+	height: 40px;
+	width: 40px;
+	background-color: rgb(163, 163, 117);
+}
+.horizontalButton {
+	height: 25px;
+	width: 40px;
+	background-color: rgb(0, 0, 102);
+	color: white;
+}
+.cornerButton {
+	height: 25px;
+	width: 25px;
+	background-color: rgb(0, 0, 102);
+	color: white;	
+}
+.verticalButton {
+	height: 40px;
+	width: 25px;
+	background-color: rgb(0, 0, 102);
+	color: white;
+}
+#equalsButton {
+	height: 71px;
+	width: 25px;
+	background-color: rgb(0, 51, 0);
+	color: white;
+}
+#zeroButton {
+	height: 25px;
+	width: 40px;
+}
+#C {
+	height: 25px;
+	width: 40px;
+	background-color: rgb(204, 0, 0);
+}
+#decimalButton {
+	height: 25px;
+	width: 40px;
+	color: black;
+	font-weight: bold;
+}
+.button {
+	border-radius: 5px;
+	color: white;
+}
+

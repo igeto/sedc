@@ -1,0 +1,32 @@
+.red {
+	background-color: #cc0000;
+}
+.blue {
+	background-color: #000099;
+}
+
+.yellow {
+	background-color: #ffcc00;
+}
+.green {
+	background-color: #00b300;
+}
+.field {
+	background-color: #999999;
+}
+.greenarrow {
+	background-image: url(../img/greenarrow.png);
+	background-color: #999999;
+}
+.yellowarrow {
+	background-image: url(../img/yellowarrow.png);
+	background-color: #999999;
+}
+.bluearrow {
+	background-image: url(../img/bluearrow.png);
+	background-color: #999999;
+}
+.redarrow {
+	background-image: url(../img/redarrow.png);
+	background-color: #999999;
+}

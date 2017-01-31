@@ -1,0 +1,59 @@
+.btn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    color: #fff;
+    border-radius: 10px;
+    outline: none; 
+}
+.btn0 {
+   transition: all 5s .3s ease;
+}
+.btn0:hover {
+    background-color: green;
+}
+.btn1 {
+    transition: all 3s .3s ease-in;
+}
+.btn1:hover {
+    border-radius: 50%;
+    background-color: orange;
+}
+.btn2 {
+    transition-property: all;
+    transition-delay: .2s;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+.btn2:hover {
+    width: 200px;
+}
+.btn3 {
+    transition-property: border-radius width;
+    transition-delay: .2s;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+}
+.btn3:hover {
+    width: 200px;
+    border-radius: 30%;
+}
+.btn4 {
+    transition: all 1s .2s ease-in;
+}
+.btn4:hover {
+    width: 200px;
+}
+.btn5 {
+    transition: all 1s .2s ease-out;
+}
+.btn5:hover {
+    width: 200px;
+}
+.btn6 {
+    transition: all 1s .2s ease-in-out;
+}
+.btn6:hover {
+    width: 200px;
+}

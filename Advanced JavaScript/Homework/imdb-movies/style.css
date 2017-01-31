@@ -1,0 +1,25 @@
+.globalContainer {
+    margin-top: 30px;
+}
+
+.movieWraper {
+    height: 670px;
+}
+
+.movieContainer {
+    height: 660px;
+}
+
+.posterImage {
+    height: 350px;
+}
+
+.padding {
+    padding: 10px;
+}
+
+@media (max-width: 770px) {
+    #pages {
+        display: none;
+    }
+}

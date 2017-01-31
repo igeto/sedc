@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Tables</title>
+	</head>
+	<body>
+		<!-- Creating tables -->
+		<table border="25" cellpadding="10" cellspacing="10">
+			<!-- thead is for title of the table -->
+			<caption>My first table</caption>
+			<thead>
+				<tr>
+					<th>Column 01</th>
+					<th>Column 02</th>
+				</tr>
+			</thead>
+			<!-- tbody is absolute must -->
+			<tbody>
+				<!-- Row 01 -->
+				<tr>
+					<td rowspan="2">Row 01, Cell 01</td>
+					<td>Row 01, Cell 02</td>
+				</tr>
+				<!-- Row 02 -->
+				<tr>
+					<!-- <td>Row 02, Cell 01</td> --> <!-- doesnt exist cuz of rowspan in upper row -->
+					<td>Row 02, Cell 02</td>
+				</tr>
+			</tbody>
+			<!-- tfoot is the footer for the footer of the table -->
+			<tfoot>
+				<tr>
+					<th colspan="2">Total: 250</th>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

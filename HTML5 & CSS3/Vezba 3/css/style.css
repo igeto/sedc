@@ -1,0 +1,22 @@
+* {
+	margin: 10;
+	padding: 10px;
+}
+.div__inline {
+	display: inline;
+	background-color: red;
+	visibility: visible;
+}
+.div__block {
+	display: block;
+	background-color: yellow;
+	visibility: hidden;
+}
+.div__inline-block {
+	display: inline-block;
+	background-color: lightgreen;
+}
+.div__none {
+	display: none;
+	background-color: black;
+}

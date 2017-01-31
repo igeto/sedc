@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Absolute Links</title>
+	</head>
+	<body>
+	<h1 id="TopPage">Absolute links</h1>
+		<!-- How to make absolute links -->
+		<a href = "http://google.com" target="_blank">Google</a> <!-- This is an absolute link, "target = _blank" opens the link in new tab -->
+		<a href="../Vezba JS/Vezba 1.html">Vezba 1</a> <!-- This is a relative link to different folder "../" goes one place back i.e. out of the folder -->
+		<a href="index2.html">index2</a>
+
+		<a href="#BottomPage">Bottom</a> <!-- Button that takes u to the bottom of the page -->
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<!-- mapped image or image with a map -->
+		<img src="img/linkoln.jpg" alt="Picture of Lincoln being hipster before it was cool" width="150px"
+		usemap="#imagemap" />
+
+		<map name="imagemap"> <!-- map of an image -->
+			<area shape="rect" coords="0,0,75,95" href="http://google.com" target="_blank" /> <!-- one area of a map of an image that leads to a specific location -->
+			<area shape="circle" coords="120,135,25" href="http://bing.com" target="_blank" />
+			<area shape="poly" coords="75,0,85,0,88,43,120,35,75,0" href="http://facebook.com" target="_blank" />
+		</map>
+
+		<!-- Image as a link -->
+		<a href="http://totalfratmove.com/wp-content/uploads/user_avatars/tfm_avatar_58175_1288305308.jpg" target="_blank">
+			<img src="img/linkoln.jpg" alt="Picture of Lincoln being hipster before it was cool" width="150px" />
+		</a>
+
+		<p id="BottomPage">Footer &copy; 2016</p>
+
+		<a href="mailto: igor.mitkovski@gmail.com">Mail Igor Igeto</a>
+
+		<a href="#TopPage">Top</a> <!-- Button that takes u to the top of the page -->
+	</body>
+</html>

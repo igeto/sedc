@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <section>
+             <form action="">
+                <table>
+                    <thead>
+                        <th colspan="2"><h2>Registration form</h2></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label"><label for="firstName" class="lbl">First Name: </label></td>
+                            <td><input type="text" id="firstName" class="textField" placeholder="Enter your first name" required></td>
+                        <tr>
+                            <td class="label"><label for="lastName" class="lbl">Last Name: </label></td>
+                            <td><input type="text" id="lastName" class="textField" placeholder="Enter your last name" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label"> <label for="username" class="lbl">Username: </label></td>
+                            <td><input type="text" id="username" class="textField" placeholder="Enter your username" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="password" class="lbl">Password: </label></td>
+                            <td><input type="password" id="password" class="textField" placeholder="Enter your password" requred></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="confirmPassword" class="lbl">Re-type password: </label></td>
+                            <td><input type="password" id="confirmPassword" class="textField" placeholder="Re-type your password" requred></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="email" class="lbl">Email: </label></td>
+                            <td><input type="email" id="email" class="textField" placeholder="Enter your email"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="birthday" class="lbl">Birth date: </label></td>
+                            <td><input type="date" id="birthday" class="textField" placeholder="Enter your birth date"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="city" class="lbl">Place of living: </label></td>
+                            <td><input type="text" id="city" class="textField" placeholder="City"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="hobbies" class="lbl">Interest: </label></td>
+                            <td>
+                                <select name="hobbies" id="hobbies"  class="dropdown">
+                                    <option value="sports">Sports</option>
+                                    <option value="reading">Reading</option>
+                                    <option value="gaming">Gaming</option>
+                                    <option value="cooking">Cooking</option>
+                                </select>
+                            </td>
+                        </tr>
+                     </tbody>
+                     <tfoot>
+                         <tr></tr>
+                         <tr>
+                            <td></td>
+                            <td>
+                                <button id="submit" class="submit" type="submit">Submit</button>
+                                <button id="reset" type="reset">Clear</button>
+                            </td> 
+                         </tr>
+                         
+                     </tfoot>
+                </table>      
+            </form>
+        </section>
+        <footer>
+
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

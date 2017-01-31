@@ -1,5 +1,5 @@
 let xhr = new XMLHttpRequest();
-xhr.open('GET', 'movies/movie-list.json', true);
+xhr.open('GET', 'https://raw.githubusercontent.com/igeto/sedc/master/Advanced%20JavaScript/Homework/task-3/movies/movie-list.json', true);
 xhr.send(null);
 
 xhr.onreadystatechange = () => {
@@ -14,8 +14,22 @@ xhr.onreadystatechange = () => {
         let $setPageSize = $("#setPageSize");
         let $previousBtn = $("#previous");
         let $nextBtn = $("#next");
-        let $searchBtn = $("#search");
+        let $searchBtn = $("#searchBtn");
 
+        let $rank = $("#rank");
+        let $title = $("#title");
+        let $year = $("#year");
+        let $rating = $("#rating");
+        let isSorted = false;
+
+        let sort = (filteredMovieList, index) => {
+            filteredMovieList = filteredMovieList.sort((a, b) => {
+                if (a[index] < b[index]) return -1;
+                if (a[index] > b[index]) return 1;
+                return 0;
+            });
+        };
+        
         let $pageSize = $("#pageSize option").filter(":selected").val();
 
         let displayPage = (pageNumber, pageSize, filteredMovieList, $movieTable) => {
@@ -64,7 +78,7 @@ xhr.onreadystatechange = () => {
                     displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
                 }
             });
-            $searchBtn.on("keyup", () => {
+            $searchBtn.on("click", () => {
                 let $searchVal = $("#search").val();
                 if (!$searchVal)
                     displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
@@ -79,6 +93,46 @@ xhr.onreadystatechange = () => {
                     return false;
                 });
                 displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
+            });
+            $title.on("click", () => {
+                sort(filteredMovieList, $("#title").attr("id"));
+                if (!isSorted) {
+                    isSorted = true;
+                    displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
+                } else {
+                    displayPage(pageNumber, pageSize, filteredMovieList.reverse(), $movieTable);
+                    isSorted = false;
+                }
+            });
+            $rank.on("click", () => {
+                sort(filteredMovieList, $("#rank").attr("id"));
+                if (!isSorted) {
+                    isSorted = true;
+                    displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
+                } else {
+                    displayPage(pageNumber, pageSize, filteredMovieList.reverse(), $movieTable);
+                    isSorted = false;
+                }
+            });
+            $rating.on("click", () => {
+                sort(filteredMovieList, $("#rank").attr("id"));
+                if (!isSorted) {
+                    isSorted = true;
+                    displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
+                } else {
+                    displayPage(pageNumber, pageSize, filteredMovieList.reverse(), $movieTable);
+                    isSorted = false;
+                }
+            });
+            $year.on("click", () => {
+                sort(filteredMovieList, $("#year").attr("id"));
+                if (!isSorted) {
+                    isSorted = true;
+                    displayPage(pageNumber, pageSize, filteredMovieList, $movieTable);
+                } else {
+                    displayPage(pageNumber, pageSize, filteredMovieList.reverse(), $movieTable);
+                    isSorted = false;
+                }
             });
         });
     }

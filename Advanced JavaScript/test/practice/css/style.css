@@ -1,0 +1,7 @@
+#container {
+	display: inline-block;
+	margin: 0 500px;
+}
+#addRecipe {
+	background-color: red;
+}

@@ -3,13 +3,13 @@
 }
 
 body {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 html {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 @keyframes html {
@@ -225,8 +225,8 @@ header {
 }
 
 .skills-title {
-    position: relative;
     opacity: .7;
+    position: relative;
 }
 
 .skills-list {

@@ -37,6 +37,16 @@ let appendRecipe = () => {
     );
     let tds = document.getElementsByTagName("td");
     let trs = document.getElementsByTagName("tr");
+    for (let j = 5; j < tds.length; j = j + 7) {
+        let td = tds[j];
+        let showButton = document.createElement("button");
+        showButton.textContent = 'Show';
+        $(showButton).on('click', () => {
+        	
+        });
+        if (!td.hasChildNodes())
+            td.appendChild(showButton);
+    }
     for (let i = 6; i < tds.length; i = i + 7) {
         let td = tds[i];
         let deleteButton = document.createElement("button");

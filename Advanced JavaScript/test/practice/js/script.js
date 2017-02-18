@@ -1,7 +1,5 @@
 let $container = $('#container');
 let recipes = [];
-let showIngredients = false;
-let showPreparation = false;
 
 class Recipe {
     constructor(name, origin) {
@@ -29,7 +27,6 @@ let newRecipe = () => {
 
 
 let getIngredients = () => {
-    showIngredients = true;
     $container.append(
         `<h3>Ingredients:</h3><br>
 		<select>
@@ -54,7 +51,6 @@ let getIngredients = () => {
 
 
 let preparation = () => {
-    showPreparation = true;
     $container.append(
         `<h3>Preparation:</h3>
 		<label for='preparationTime'>Preparation Time</label>
@@ -78,22 +74,17 @@ $(() => {
         $('#containerList').removeClass('hide');
     });
     $container.on('click', '#addRecipe', () => {
-        console.log('im clicked');
         recipes.push(new Recipe($('#name').val(), $('#origin').val()));
-        if (!showIngredients)
             getIngredients();
         $('#addRecipe').toggle('.hide');
+
     });
     $container.on('click', '#getIngredient', () => {
         if (recipes != [])
             recipes[recipes.length - 1].ingredients[$('select option:selected').attr('value')] = $('#ingredientAmmount').val();
     });
     $container.on('click', '#next', () => {
-        $container.html("");
-        newRecipe();
-        if (!showPreparation)
             preparation();
-        $('#addRecipe').toggle('.hide');
         $('#next').toggle('.hide');
         $('#getIngredient').toggle('.hide');
     });
@@ -104,12 +95,10 @@ $(() => {
             appendRecipe();
             $container.html("");
             newRecipe();
-            showIngredients = false;
-            showPreparation = false;
         }
     });
     $('#containerList').on('click', 'deleteButton', () => {
-    	$('deleteButton').parent().parent().remove();
-    	console.log('clicked');
+        $('deleteButton').parent().parent().remove();
+        console.log('clicked');
     });
 });

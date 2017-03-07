@@ -22,169 +22,183 @@
     </nav>
     <div id="entryContainer">
         <h5>Enter your new book!</h5>
-        <label id="bbasdab" for="bookType">Is the book a novel or an anthology?</label>
+        <label for="bookType">Is the book a novel or an anthology?</label>
         <select id="bookTypeChoice">
             <option>Novel</option>
             <option>Anthology</option>
         </select>
         <table id="novelEntry">
-            <tr>
-                <td>
-                    <label for="novelTitle">Title: </label>
-                </td>
-                <td>
-                    <input type="text" id="novelTitle" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelAuthor">Author: </label>
-                </td>
-                <td>
-                    <input type="text" id="novelAuthor" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelPublisher">Publisher: </label>
-                </td>
-                <td>
-                    <input type="text" id="novelPublisher" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelYear">Year: </label>
-                </td>
-                <td>
-                    <select id="novelYear"></select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelPageLength">Page length: </label>
-                </td>
-                <td>
-                    <input type="number" id="novelPageLength">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelSeries">Series: </label>
-                </td>
-                <td>
-                    <input type="text" id="novelSeries">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="seriesNumber">Series number: </label>
-                </td>
-                <td>
-                    <input type="number" id="seriesNumber">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelISBN">ISBN: </label>
-                </td>
-                <td>
-                    <input type="text" id="novelISBN" pattern="[0-9]">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="novelReview">Review: </label>
-                </td>
-                <td>
-                    <textarea id="novelReview" style="width: 200px; height: 150px"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <button id="saveNovel">Save novel</button>
-                </td>
-            </tr>
+            <form action='index.html' method="post">
+                <tr>
+                    <td>
+                        <label for="novelTitle">Title: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="novelTitle" class="inputField" name='novelTitle' required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelAuthor">Author: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="novelAuthor" class="inputField" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelPublisher">Publisher: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="novelPublisher" class="inputField" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelYear">Year: </label>
+                    </td>
+                    <td>
+                        <select id="novelYear"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelPageLength">Page length: </label>
+                    </td>
+                    <td>
+                        <input type="number" id="novelPageLength" class="inputField">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelSeries">Series: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="novelSeries" class="inputField">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="seriesNumber">Series number: </label>
+                    </td>
+                    <td>
+                        <input type="number" id="seriesNumber" class="inputField">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelISBN">ISBN: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="novelISBN" class="inputField" pattern="[0-9]">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="novelReview">Review: </label>
+                    </td>
+                    <td>
+                        <textarea id="novelReview" class="inputField" style="width: 200px; height: 150px"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="saveNovel" type="submit">Save novel</button>
+                    </td>
+                </tr>
+            </form>
         </table>
         <table id="anthologyEntry" class="hidden">
-            <tr>
-                <td>
-                    <label for="anthTitle">Title: </label>
-                </td>
-                <td>
-                    <input type="text" id="anthTitle" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthEditor">Editor: </label>
-                </td>
-                <td>
-                    <input type="text" id="anthEditor" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthPublisher">Publisher: </label>
-                </td>
-                <td>
-                    <input type="text" id="anthPublisher" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthYear">Year: </label>
-                </td>
-                <td>
-                    <select id="anthYear"></select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthPageLength">Page length: </label>
-                </td>
-                <td>
-                    <input type="number" id="anthPageLength">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthStories">Stories: </label>
-                </td>
-                <td id="storySection">
-                    
-                    <button id="newStory">Add story</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="anthISBN">ISBN: </label>
-                </td>
-                <td>
-                    <input type="text" id="anthISBN" pattern="[0-9]">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="anthReview">Review: </label>
-                </td>
-                <td>
-                    <textarea id="anthReview" style="width: 200px; height: 150px"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <button id="saveAnthology">Save anthology</button>
-                </td>
-            </tr>
+            <form action='index.html' method="post">
+                <tr>
+                    <td>
+                        <label for="anthTitle">Title: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="anthTitle" class="inputField" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthEditor">Editor: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="anthEditor" class="inputField" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthPublisher">Publisher: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="anthPublisher" class="inputField" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthYear">Year: </label>
+                    </td>
+                    <td>
+                        <select id="anthYear"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthPageLength">Page length: </label>
+                    </td>
+                    <td>
+                        <input type="number" id="anthPageLength" class="inputField">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthStories">Stories: </label>
+                    </td>
+                    <td id="storySection">
+                        <button id="newStory" class="inputField">Add story</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthISBN">ISBN: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="anthISBN" class="inputField" pattern="[0-9]">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="anthReview">Review: </label>
+                    </td>
+                    <td>
+                        <textarea id="anthReview" class="inputField" style="width: 200px; height: 150px"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="saveAnthology">Save anthology</button>
+                    </td>
+                </tr>
+            </form>
         </table>
     </div>
     <div id="listContainer" class="hidden">
         <table class="table">
             <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button id="previous" type="button" class="btn btn-secondary">Previous</button></th>
+                    <th>Page <span id="page">#</span> of <span id="pages">#</span></th>
+                    <th><button id="next" type="button" class="btn btn-secondary">Next</button></th>
+                </tr>
                 <tr>
                     <th>#</th>
                     <th>Title</th>
@@ -207,6 +221,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/sorting.js"></script>
+    <script type="text/javascript" src="js/paging.js"></script>
 </body>
 
 </html>

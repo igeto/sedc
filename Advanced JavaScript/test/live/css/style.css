@@ -13,3 +13,6 @@
 table {
 	margin: 0 auto;
 }
+.required {
+	color: red;
+}

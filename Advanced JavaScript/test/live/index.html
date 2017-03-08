@@ -28,10 +28,10 @@
             <option>Anthology</option>
         </select>
         <table id="novelEntry">
-            <form action='index.html' method="post">
+            <form action='index.html' method="post" target="_blank">
                 <tr>
                     <td>
-                        <label for="novelTitle">Title: </label>
+                        <label id="novelTitleLabel" class="requiredLabel" for="novelTitle">*Title: </label>
                     </td>
                     <td>
                         <input type="text" id="novelTitle" class="inputField" name='novelTitle' required>
@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="novelAuthor">Author: </label>
+                        <label id="novelAuthorLabel" class="requiredLabel" for="novelAuthor">*Author: </label>
                     </td>
                     <td>
                         <input type="text" id="novelAuthor" class="inputField" required>
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="novelPublisher">Publisher: </label>
+                        <label id="novelPublisherLabel" class="requiredLabel" for="novelPublisher">*Publisher: </label>
                     </td>
                     <td>
                         <input type="text" id="novelPublisher" class="inputField" required>
@@ -107,13 +107,17 @@
                         <button id="saveNovel" type="submit">Save novel</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>* Required field</td>
+                    <td></td>
+                </tr>
             </form>
         </table>
         <table id="anthologyEntry" class="hidden">
             <form action='index.html' method="post">
                 <tr>
                     <td>
-                        <label for="anthTitle">Title: </label>
+                        <label id="anthTitleLabel" class="requiredLabel" for="anthTitle">*Title: </label>
                     </td>
                     <td>
                         <input type="text" id="anthTitle" class="inputField" required>
@@ -121,7 +125,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="anthEditor">Editor: </label>
+                        <label id="anthEditorLabel" class="requiredLabel" for="anthEditor">Editor: </label>
                     </td>
                     <td>
                         <input type="text" id="anthEditor" class="inputField" required>
@@ -129,7 +133,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="anthPublisher">Publisher: </label>
+                        <label id="anthPublisherLabel" class="requiredLabel" for="anthPublisher">Publisher: </label>
                     </td>
                     <td>
                         <input type="text" id="anthPublisher" class="inputField" required>

@@ -65,7 +65,7 @@ class Story {
 // let newNovel = () => {
 //     tableOrder++;
 //     $listOfBooks.append(`
-// 		<tr>
+//      <tr>
 //             <th scope="row">${tableOrder}</th>
 //             <td>${books[books.length - 1].title} (${$('#bookTypeChoice option:selected').val()})</td>
 //             <td>${books[books.length - 1].author}</td>
@@ -77,8 +77,24 @@ class Story {
 //             <td>${books[books.length - 1].isbn}</td>
 //             <td>${fixReviewText()}</td>
 //         </tr>
-// 	`);
+//  `);
 // };
+let checkNovelRequirements = () => {
+    if ($('#novelTitle').val() == "")
+        $('#novelTitleLabel').addClass('required');
+    else
+        $('#novelTitleLabel').removeClass('required');
+    if ($('#novelAuthor').val() == "")
+        $('#novelAuthorLabel').addClass('required');
+    else
+        $('#novelAuthorLabel').removeClass('required');
+    if ($('#novelPublisher').val() == "")
+        $('#novelPublisherLabel').addClass('required');
+    else
+        $('#novelPublisherLabel').removeClass('required');
+};
+
+
 let storiesOutput = () => {
     if (stories.length > 1) {
         let k = 0;
@@ -100,7 +116,7 @@ let storiesOutput = () => {
 // let newAnthology = () => {
 //     tableOrder++;
 //     $listOfBooks.append(`
-// 		<tr>
+//      <tr>
 //             <th scope="row">${tableOrder}</th>
 //             <td>${books[books.length - 1].title} (${$('#bookTypeChoice option:selected').val()})</td>
 //             <td>${books[books.length - 1].editor}</td>
@@ -112,7 +128,7 @@ let storiesOutput = () => {
 //             <td>${books[books.length - 1].isbn}</td>
 //             <td>${fixReviewText()}</td>
 //         </tr>
-// 	`);
+//  `);
 // };
 
 
@@ -131,16 +147,19 @@ $(() => {
             displayPage(pageNumber, books, $listOfBooks);
     });
     $('#saveNovel').on('click', () => {
-        // if ($('#novelTitle').val() != "" && $('#novelAuthor').val() != '' && $('#novelPublisher').val() != '') {
+        event.preventDefault();
+        if ($('#novelTitle').val() != "" && $('#novelAuthor').val() != '' && $('#novelPublisher').val() != '') {
             books.push(new Novel($('#novelTitle').val() + " (Novel)",
                 $('#novelAuthor').val(), $('#novelPublisher').val(),
                 $('#novelYear option:selected').val(),
                 $('#novelPageLength').val(), $('#novelSeries').val(),
                 $('#seriesNumber').val(), $('#novelISBN').val(),
                 $('#novelReview').val()));
-            // newNovel();
-        // }
-        event.preventDefault();
+            $('.inputField').val('');
+            $('.requiredLabel').removeClass('required')
+        } else {
+            checkNovelRequirements();
+        }
     });
     $('#saveAnthology').on('click', () => {
         if ($('#anthTitle').val() != "" && $('#anthEditor').val() != '' && $('#anthPublisher').val() != '') {
@@ -160,30 +179,30 @@ $(() => {
     });
     $('#newStory').on('click', () => {
         $('#anthologyEntry tr').eq(5).after(`
-			<tr>
+            <tr>
                 <td><label for='storyTitle'>Story Title: </label></td>
-            	<td><input type='text' id='storyTitle'</td>
+                <td><input type='text' id='storyTitle'</td>
             </tr>
             <tr>
-            	<td><label for='storyAuthor'>Story author: </label></td>
-            	<td><input type='text' id='storyAuthor'</td>
+                <td><label for='storyAuthor'>Story author: </label></td>
+                <td><input type='text' id='storyAuthor'</td>
             </tr>
             <tr>
-            	<td>Has this story been published before? </td>
-            	<td>
-            		<input type='radio' name='original' value='true'>yes
-            		<input type='radio' name='original' value='false'>no
-            		<button id='saveStory'>Save story</button>
-            	</td>
+                <td>Has this story been published before? </td>
+                <td>
+                    <input type='radio' name='original' value='true'>yes
+                    <input type='radio' name='original' value='false'>no
+                    <button id='saveStory'>Save story</button>
+                </td>
             </tr>
-    	`);
+        `);
     });
     $('#anthologyEntry').on('click', '#saveStory', () => {
         stories.push(new Story($('#storyTitle').val(),
             $('#storyAuthor').val(), $("input[name='original']:checked").val()));
         $('#storySection').prepend(`
-    		${stories[stories.length - 1].title}<br>			
-    	`);
+            ${stories[stories.length - 1].title}<br>            
+        `);
         $('#anthologyEntry tr').eq(6).hide();
         $('#anthologyEntry tr').eq(7).hide();
         $('#anthologyEntry tr').eq(8).hide();

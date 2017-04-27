@@ -148,7 +148,7 @@ $(() => {
     });
     $('#saveNovel').on('click', () => {
         event.preventDefault();
-        if ($('#novelTitle').val() != "" && $('#novelAuthor').val() != '' && $('#novelPublisher').val() != '') {
+        if ($('#novelTitle').val() != '' && $('#novelAuthor').val() != '' && $('#novelPublisher').val() != '') {
             books.push(new Novel($('#novelTitle').val() + " (Novel)",
                 $('#novelAuthor').val(), $('#novelPublisher').val(),
                 $('#novelYear option:selected').val(),

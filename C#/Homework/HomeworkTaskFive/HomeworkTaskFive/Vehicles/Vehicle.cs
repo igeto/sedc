@@ -15,25 +15,21 @@ namespace HomeworkTaskFive.Vehicles
         public int Year { get; set; }
         public double Power { get; set; }
         
-        public void SetLicensePlate()
+        public void SetLicensePlate(string plateNumber)
         {
-            Console.WriteLine("* License Plate number must be 7 or 8 characters long");
-            string temp = Console.ReadLine();
-            string temp2 = temp.Insert(temp.Length - 2, "-");
-            LicensePlate = temp2.Insert(2, "-");
-
-            LicensePlate = LicensePlate.ToUpper();
+            if (plateNumber.Length == 7 || plateNumber.Length == 8)
+            {
+                LicensePlate = plateNumber.Insert(plateNumber.Length - 2, "-").Insert(2, "-").ToUpper();
+            } 
+            else
+                Console.WriteLine("The licence plate number is not valid.");
         }
 
         public virtual void PrintInfo()
         {
             Console.WriteLine("===============================================");
-            Console.WriteLine("Make: " + Make);
-            Console.WriteLine("Model: " + Model);
-            Console.WriteLine("Color: " + Color);
-            Console.WriteLine("Year: " + Year);
-            Console.WriteLine("Power: " + Power + "KW");
-            Console.WriteLine("License Plate: " + LicensePlate);
+            Console.WriteLine($"Make: {Make}\nModel: {Model}\nColor: {Color}\nYear: {Year}\nPower: {Power}KW\nLicense Plate: {LicensePlate}");
+            
         }
     }
 }

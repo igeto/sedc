@@ -20,7 +20,6 @@ namespace HomeworkTaskFive
         }
         static bool MainMenu()
         {
-            Console.Clear();
             Console.WriteLine("===============================================");
             Console.WriteLine("Choose option");
             Console.WriteLine("  1) Create Car");
@@ -62,11 +61,13 @@ namespace HomeworkTaskFive
             Console.Write("Year: ");
             car.Year = int.Parse(Console.ReadLine());
             Console.WriteLine("License Plate: ");
-            car.SetLicensePlate();
+            string temp = Console.ReadLine();
+            car.SetLicensePlate(temp);
             Console.Write("Power: ");
             car.Power = double.Parse(Console.ReadLine());
 
             car.PrintInfo();
+            Console.ReadLine();
         }
         static void CreateTruck()
         {
@@ -81,8 +82,9 @@ namespace HomeworkTaskFive
             truck.Color = Console.ReadLine();
             Console.Write("Year: ");
             truck.Year = int.Parse(Console.ReadLine());
-            Console.WriteLine("License Plate: ");
-            truck.SetLicensePlate();
+            Console.WriteLine("License Plate:\n* The licence plate number must be between 7 and 8 characters long");
+            string temp = Console.ReadLine();
+            truck.SetLicensePlate(temp);
             Console.Write("Power: ");
             truck.Power = double.Parse(Console.ReadLine());
             Console.Write("Capacity in tones: ");

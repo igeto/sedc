@@ -13,7 +13,7 @@ namespace HomeworkTaskFive.Vehicles
         public override void PrintInfo()
         {
             base.PrintInfo();
-            Console.WriteLine("Capacity: " + Capacity + "t");
+            Console.WriteLine($"Capacity: {Capacity}t");
         }
     }
 }

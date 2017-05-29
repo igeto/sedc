@@ -1,0 +1,15 @@
+﻿@model  IEnumerable<VideoStore.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movie Library</h2> 
+    @foreach (var movie in Model)
+    {
+        <div>
+            <div>@movie.Id</div>
+            <div>@movie.Name</div>
+        </div>
+    }
+
+

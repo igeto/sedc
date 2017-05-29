@@ -1,0 +1,10 @@
+﻿@model WorkingWithEntity.Models.StudentViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you sure you want to delete @Model.FirstName @Model.LastName from the list of students?</h2>
+
+<input type="submit" value="Confirm" class="btn btn-def" />
+
+@Html.ActionLink("Return to the list of students", "Index", new { id = Model.Id })

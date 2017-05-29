@@ -1,0 +1,20 @@
+﻿@model BookStore.Models.Book
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Content)
+    @Html.TextBoxFor(x => x.Sales)
+    @Html.TextBoxFor(x => x.Taxes)
+
+    <text>
+        <input type="submit" name="Submit" />
+    </text>
+
+}

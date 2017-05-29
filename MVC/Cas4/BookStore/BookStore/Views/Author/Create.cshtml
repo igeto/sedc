@@ -1,0 +1,21 @@
+﻿@model BookStore.Models.Author
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(x => x.Id)
+    @Html.TextBoxFor(x => x.FirstName)
+    @Html.TextBoxFor(x => x.LastName)
+    @Html.TextBoxFor(x => x.Age)
+    @Html.TextBoxFor(x => x.NumberOfBooks)
+
+    <text>
+        <input type="submit" name="Submit" />
+    </text>
+
+}

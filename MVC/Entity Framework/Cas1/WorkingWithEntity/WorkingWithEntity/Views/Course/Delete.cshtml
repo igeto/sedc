@@ -1,0 +1,12 @@
+﻿@model WorkingWithEntity.Models.CourseViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you sure you want to delete this course?</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.Id)
+    <input type="submit" value="Confirm" class="btn btn-def" />
+}
+@Html.ActionLink("Go to index", "Index")

@@ -1,0 +1,13 @@
+﻿@model WorkingWithEntity.Models.CourseViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.Id)
+    <div><span>Title:</span> @Html.TextBoxFor(x => x.Title)</div>
+    <div><span>Credits:</span> @Html.TextBoxFor(x => x.Credits)</div>
+    <input type="submit" value="Edit" class="btn btn-def" />
+}

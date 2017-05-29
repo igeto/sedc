@@ -1,0 +1,22 @@
+﻿@model List<WorkingWithEntity.Models.CourseViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    @Html.ActionLink("Create New Course", "Create", "Course")
+</div>
+
+<table style="border: 1px solid black">
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td style="border: 1px solid black">@course.Title</td>
+            <td style="border: 1px solid black">@course.Credits</td>
+            <td style="border: 1px solid black">@Html.ActionLink("Delete Course", "Delete", new { id = course.Id })</td>
+            <td style="border: 1px solid black">@Html.ActionLink("edit Course", "Edit", new { id = course.Id})</td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,21 @@
+﻿@model List<WorkingWithEntity.Domain.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Id</td>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@Html.ActionLink("Edit student details", "Edit", new { id = student.Id })</td>
+            <td>@Html.ActionLink("Delete student", "Delete", new { id = student.Id })</td>
+        </tr>
+    }
+</table>
+

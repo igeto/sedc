@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "jQuery AJAX";
+}
+
+<h2>@ViewBag.Title</h2>
+<div id="timeDisplay"></div>
+<ul id="books"></ul>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        jQuery(() => {
+            $.getJSON("AllBooks", "", (data) => {
+                $(data).each((index, element) => {
+                    $("#books").append("<li>" + element.Name);
+                });
+            });
+        });
+    </script>    
+}
+
+
+
+
+
+@*<div id="timeDisplayLoading" style="display: none">Loading...</div>*@
+@*<a onclick="getServerTime()" href="#" class="btn btn-primary">Get Server Time</a>
+<script>
+    function getServerTime() {
+        $("#timeDisplay").load("/Home/ServerTime");
+    }
+</script>
+@Ajax.ActionLink("Get Server Time", "ServerTime", "Home", null,
+        new AjaxOptions
+        {
+            UpdateTargetId = "timeDisplay",
+            LoadingElementId = "timeDisplayLoading",
+            HttpMethod = "GET",
+            InsertionMode = InsertionMode.Replace,
+            OnBegin = "OnAjaxRequestBegin",
+            OnFailure = "OnAjaxRequestFailure",
+            OnSuccess = "OnAjaxRequestSuccess",
+            OnComplete = "OnAjaxRequestComplete"
+        },
+        new {@class = "btn btn-primary"}
+    )
+
+<script type="text/javascript">
+    function OnAjaxRequestBegin() {
+        console.log("This is the OnBegin Callback");
+    }
+    function OnAjaxRequestFailure() {
+        console.log("This is the OnFailure Callback");
+    }
+    function OnAjaxRequestSuccess() {
+        console.log("This is the OnSuccess Callback");
+    }
+    function OnAjaxRequestComplete() {
+        console.log("This is the OnComplete Callback");
+    }
+</script>*@

@@ -4,10 +4,9 @@
 }
 
 <h2>Edit</h2>
-
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(x => x.Id);
+    @Html.HiddenFor(x => x.Id)
     <div><span>Title:</span> @Html.TextBoxFor(x => x.FirstName)</div>
     <div><span>Credits:</span> @Html.TextBoxFor(x => x.LastName)</div>
     <input type="submit" value="Edit" class="btn btn-def" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -72,7 +73,7 @@ namespace WorkingWithEntity.Controllers
                 Student student = db.Students.Where(x => x.Id == model.Id).FirstOrDefault();
                 student.FirstName = model.FirstName;
                 student.LastName = model.LastName;
-                db.Students.Add(student);
+                db.Entry(student).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

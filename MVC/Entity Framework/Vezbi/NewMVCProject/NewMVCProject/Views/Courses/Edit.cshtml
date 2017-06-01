@@ -1,0 +1,14 @@
+﻿@model NewMVCProject.Models.CourseViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.ID)
+    <div>Edit Title: </div>@Html.TextBoxFor(x => x.Title)
+    <div>Edit Credits: </div>@Html.TextBoxFor(x => x.Credits)
+    <input type="submit" value="Confirm" nameclass="btn btn-success" />
+}

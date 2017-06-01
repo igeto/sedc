@@ -1,0 +1,20 @@
+﻿@model List<NewMVCProject.Models.CourseViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Create new course", "Create")
+
+<table>
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.Title</td>
+            <td>@course.Credits</td>
+            <td>@Html.ActionLink("Edit course", "Edit", new { id = course.ID})</td>
+            <td>@Html.ActionLink("Delete course", "Delete", new { id = course.ID })</td>
+        </tr>
+    }
+</table>

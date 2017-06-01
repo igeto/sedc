@@ -1,0 +1,14 @@
+﻿@model NewMVCProject.Models.CourseViewModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you sure?</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.ID)
+    <input type="submit" value="Delete Course" nameclass="btn btn-success" />
+}
+
+@Html.ActionLink("No I changed my mind", "Index")

@@ -1,0 +1,12 @@
+﻿@model WorkingWithEntity.Models.CourseViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+    <div><span>Title:</span> @Html.TextBoxFor(x => x.Title)</div>
+    <div><span>Credits:</span> @Html.TextBoxFor(x => x.Credits)</div>
+    <input type="submit" value="Create" class="btn btn-def"/>
+}

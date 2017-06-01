@@ -1,0 +1,13 @@
+﻿@model NewMVCProject.Models.CourseViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <div>Title: </div>@Html.TextBoxFor(x => x.Title)
+    <div>Credits: </div>@Html.TextBoxFor(x => x.Credits)
+    <input type="submit" value="Create Course" class="btn btn-success" />
+}

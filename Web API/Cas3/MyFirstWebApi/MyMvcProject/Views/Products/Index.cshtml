@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table id="products">
+
+</table>
+
+@section scripts
+{
+    <script>
+        $(() => {
+            $.ajax(
+                {
+                    method: "GET",
+                    url: "http://localhost:61491/api/products",
+                    dataType: "json"
+                }).done((data) => {
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data[i].Id, data[i].Name)
+                        //$("#products").append(`<tr><td>${data[i].Id}</td><td>${data[i].Name}`)
+                    }
+                })
+        })
+    </script>
+}
+

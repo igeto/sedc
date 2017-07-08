@@ -19,6 +19,8 @@ namespace WebApplication1.Controllers
         // GET: Users
         public ActionResult Index()
         {
+            User user = new User() { FirstName = "Igor", LastName = "Mitkovski" };
+            db.Add(user);
             return View(db.GetAll().ToList());
         }
 

@@ -18,8 +18,7 @@ namespace WebApplication1.Controllers
         // GET: Projections
         public ActionResult Index()
         {
-            var projections = db.Projections.Include(p => p.Hall).Include(p => p.Movie);
-            return View(projections.ToList());
+            return View();
         }
 
         // GET: Projections/Details/5

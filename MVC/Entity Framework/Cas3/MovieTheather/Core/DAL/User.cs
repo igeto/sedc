@@ -10,6 +10,7 @@ namespace Core.DAL
     public class User : BaseEntity
     {
         [Display(Name = "Ime")]
+        [Required(ErrorMessage = "Mora da vnesite ime")]
         [StringLength(30, MinimumLength = 2)]
         public string FirstName { get; set; }
 

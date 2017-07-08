@@ -63,8 +63,8 @@
       <DependentUpon>201706091710453_Anotacii.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ORM\IRepository.cs" />
-    <Compile Include="ORM\Repository.cs" />
+    <Compile Include="DAL\ORM\IRepository.cs" />
+    <Compile Include="DAL\ORM\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +75,9 @@
     <EmbeddedResource Include="Migrations\201706091710453_Anotacii.resx">
       <DependentUpon>201706091710453_Anotacii.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

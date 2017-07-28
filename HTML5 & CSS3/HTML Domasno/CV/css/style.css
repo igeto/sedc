@@ -63,8 +63,8 @@ body {
 
 header {
     background-attachment: fixed;
-    background-image: url("../img/1011010.jpg");
-    height: 610px;
+    background-image: url("../img/coding-924920_1920.jpg");
+    height: 706px;
 }
 
 .main-photo {
@@ -74,8 +74,10 @@ header {
 }
 
 .header-card {
-    background-color: rgba(0, 0, 0, .85);
-    border-color: rgb(187, 188, 189);
+    background-color: rgba(0, 0, 0, .4);
+    border: none;
+    padding: 20px;
+    margin-top: 65px;
     border-radius: 0;
     color: rgba(31, 216, 255, .8);
     height: 150px;
@@ -119,7 +121,7 @@ header {
     border: none;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar-dark, .navbar-nav, .nav-link:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
@@ -136,7 +138,6 @@ header {
 }
 
 .about {
-    background-image: url('../img/white-wallpaper.jpg');
     color: rgba(255, 255, 255, .7);
     font-family: 'Roboto Slab', serif;
     height: auto;
@@ -198,9 +199,11 @@ header {
 .experience-subtitle {
     padding: 20px 0 0;
 }
-
+.arrowDown {
+    float: right;
+}
 .card-header {
-    background-color: rgb(52, 73, 94);
+    background-color: rgb(0, 0, 30);
     text-decoration: none;
 }
 
@@ -230,7 +233,6 @@ header {
 }
 
 .skills-title {
-    opacity: .7;
     position: relative;
 }
 
@@ -242,7 +244,7 @@ header {
     border-right: 2px solid rgba(0, 0, 0, .1);
     content: "";
     height: 437px;
-    left: 101%;
+    left: 92.5%;
     position: absolute;
     top: 0;
     z-index: 5;
@@ -261,6 +263,7 @@ header {
     background-color: rgb(52, 73, 94);
     border-radius: 2px;
     content: "";
+    left: 0;
     height: 18px;
     position: absolute;
     width: 0;
@@ -271,6 +274,7 @@ header {
     background-color: rgb(52, 73, 94);
     border-radius: 2px;
     content: "";
+    left: 0;
     height: 18px;
     position: absolute;
     width: 0;
@@ -281,6 +285,7 @@ header {
     background-color: rgb(52, 73, 94);
     border-radius: 2px;
     content: "";
+    left: 0;
     height: 18px;
     position: absolute;
     width: 0;
@@ -291,6 +296,7 @@ header {
     background-color: rgb(52, 73, 94);
     border-radius: 2px;
     content: "";
+    left: 0;
     height: 18px;
     position: absolute;
     width: 0;
@@ -301,6 +307,7 @@ header {
     background-color: rgb(52, 73, 94);
     border-radius: 2px;
     content: "";
+    left: 0;
     height: 18px;
     position: absolute;
     width: 0;

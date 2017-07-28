@@ -1,7 +1,7 @@
 var navbar = $(".navbar");
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 600) {
+    if ($(this).scrollTop() > 706) {
         navbar.addClass("navbar-scrolled");
     } else {
         navbar.removeClass("navbar-scrolled");

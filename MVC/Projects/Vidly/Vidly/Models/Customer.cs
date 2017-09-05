@@ -22,6 +22,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Date of Birth")]
+        [Over18Validation]
         public DateTime? BirthDate { get; set; }
     }
 }

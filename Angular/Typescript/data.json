@@ -1,0 +1,39 @@
+{
+    "pets" : [
+        {
+            "name": "Snuffles",
+            "species": "dog",
+            "breed": "labradoodle",
+            "size": "large",
+            "age": 12
+        },
+        {
+            "name": "Snowball",
+            "species": "dog",
+            "breed": "justadog",
+            "size": "medium",
+            "age": 8
+        },
+        {
+            "name": "Garfield",
+            "species": "cat",
+            "breed": "cartoon",
+            "size": "large",
+            "age": 3
+        },
+        {
+            "name": "Horsy",
+            "species": "horse",
+            "breed": "mustang",
+            "size": "large",
+            "age": 7
+        },
+        {
+            "name": "Donkey",
+            "species": "donkey",
+            "breed": "cartoon",
+            "size": "small",
+            "age": 36
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+<p>
+  {{ order.id }}
+</p>
+<h1>counterinorders: {{ counterinorders }}</h1>
+<p>{{ order.product.name }}</p>
+<product (counterChanged)="handleCounterChanged($event)"></product>
